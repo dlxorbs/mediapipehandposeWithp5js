@@ -20,7 +20,7 @@ let sketch = function(p) {
     };
 //drawhands라는 함수는 아래의 내용과 같다
     p.drawhands = function(){
-      p.stroke(0)
+      p.stroke(0 , 255 , 0)
       p.strokeWeight(10)
 
 //여기에는 손의 위치를 각각 숫자로 줌 피그마에 정리된 손 번호 있음
