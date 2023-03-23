@@ -28,11 +28,21 @@ let sketch = function(p) {
       for(let i = 0; i <  detections.multiHandLandmarks.length; i++){
         for(let j = 0; j < detections.multiHandLandmarks[i].length; j++){
           const keypoints  = detections.multiHandLandmarks
-          let x = keypoints[i][j].x*p.width;
-          let y = keypoints[i][j].y*p.width;
-          let z = keypoints[i][j].z;
+          let x = keypoints[i][8].x*p.width;
+          let y = keypoints[i][8].y*p.width;
+          let z = keypoints[i][8].z;
 
+          p.strokeWeight(10)
           p.point(x,y,z)
+          p.strokeWeight(50)
+          p.point(100,200,-0.2)
+
+          let distance = p.dist(x, y, z ,100, 200, -0.2)
+
+          if(distance < 20){
+              p.stroke(255 , 0 , 0);
+          }
+          console.log(distance)
         }
       }
 

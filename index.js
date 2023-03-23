@@ -7,7 +7,6 @@
 // gotHands의 results값을 detections의 Array에 추가
     function gotHands(results) {
         detections = results;
-        console.log(detections);
       }
 
 // 미디어파이프(구글 머신러닝임)의 코드를 이용하여 미디어 파이프의 양손인식을 가져옴
